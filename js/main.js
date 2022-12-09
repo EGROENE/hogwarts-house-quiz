@@ -46,12 +46,37 @@ const allQuestions = [
 // Initialize variable to tally questions displayed:
 let questionIndex = 0;
 
+// Function to hide #question-area on page load:
+const hideQA = () => {
+    questionArea.style.display = 'none'
+}
+hideQA();
+
+// Function to style #question-area:
+const styleQA = () => {
+    questionArea.style.display = 'flex';
+    questionArea.style.flexDirection = 'column';
+    questionArea.style.textAlign = 'center';
+    questionArea.style.alignItems = 'center';
+    questionArea.style.margin = '10% auto 10% auto';
+    questionArea.style.background = 'rgba(0, 0, 0, 0.7)';
+    questionArea.style.color = 'var(--hp-gold)';
+    questionArea.style.fontSize = 'var(--size-24)';
+    questionArea.style.width = '75%';
+    questionArea.style.letterSpacing = 'var(--size-4)';
+    questionArea.style.borderRadius = '24px';
+    questionArea.style.padding = 'var(--size-42)';
+}
+
+// Function to style #results-area:
+
 const toNext = () => {  
     // Set random BG:
     setRandBG();
     
     if (questionIndex === 0) {
         greeting.style.display = 'none';
+        styleQA();
     } else {
         questionArea.removeChild(questionArea.firstChild);
     }
@@ -90,6 +115,7 @@ const toNext = () => {
         totalsArray = [slytherinTotal, gryffindorTotal, ravenclawTotal, hufflepuffTotal];
         console.log(totalsArray);
         } else {
+            questionArea.style.display = 'none';
             document.body.style.background = 'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgix.bustle.com%2Frehost%2F2016%2F9%2F13%2F6fe7362a-78fa-4484-933e-5cd0a3215d2f.jpg%3Fw%3D800%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dformat%252Ccompress%26q%3D50%26dpr%3D2&f=1&nofb=1&ipt=f77da5db48dd5f226a9485ba4901b3463f2413a421a4008c3d856a5caf9fd653&ipo=images)';
             let max = Math.max(...totalsArray);
             let userHouse = '';
