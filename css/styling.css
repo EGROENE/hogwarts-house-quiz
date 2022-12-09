@@ -35,13 +35,14 @@ body {
     flex-direction: column;
     text-align: center;
     align-items: center;
-    margin: 17% auto 17% auto;
+    margin: 10% auto 10% auto;
     background: rgba(0, 0, 0, 0.7);
     color: var(--hp-gold);
     font-size: var(--size-24);
     width: 75%;
     letter-spacing: var(--size-4);
     border-radius: 24px;
+    padding: var(--size-42);
 }
 
 #greeting h1 {
@@ -50,4 +51,19 @@ body {
 
 #greeting h2 {
     font-size: var(--size-32);
+}
+
+#start-btn {
+    background: transparent;
+    color: white;
+    font-family: 'Potterfont';
+    border: 2px solid white;
+    padding: var(--size-12) var(--size-24);
+    font-size: var(--size-24);
+    border-radius: 8px;
+}
+
+#start-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
