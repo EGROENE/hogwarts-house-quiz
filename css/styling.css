@@ -1,0 +1,7 @@
+
+/* Declare Potterfont font */
+@font-face { font-family: Potterfont; src: url('../assets/font/HarryP-MVZ6w.ttf'); }
+
+body {
+    font-family: Potterfont, serif;
+}
