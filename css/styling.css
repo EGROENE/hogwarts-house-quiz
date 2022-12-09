@@ -1,7 +1,15 @@
-
 /* Declare Potterfont font */
 @font-face { font-family: Potterfont; src: url('../assets/font/HarryP-MVZ6w.ttf'); }
 
 body {
     font-family: Potterfont, serif;
+}
+
+#greeting {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin: 17% auto 17% auto;
+    background: rgba(0, 0, 0, 0.7);
 }
