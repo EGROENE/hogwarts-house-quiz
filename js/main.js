@@ -82,16 +82,35 @@ const toNext = () => {
     }
     for (let i = questionIndex; i < (questionIndex + 1); i++) {
         if (allQuestions[i]) {
-        questionArea.innerHTML += 
-            "<div class='question'>"
-            + "<header>" + allQuestions[i].question + "</header>"
-            + "<div id='options-area'>"
-            + "<button class='option-btn slytherin-option'>" + allQuestions[i].slytherinOption + "</button>"
-            + "<button class='option-btn gryffindor-option'>" + allQuestions[i].gryffindorOption + "</button>"
-            + "<button class='option-btn ravenclaw-option'>" + allQuestions[i].ravenclawOption + "</button>"
-            + "<button class='option-btn hufflepuff-option'>" + allQuestions[i].hufflepuffOption + "</button>"
-            + "</div>"
-            + "</div>"
+            // Randomize order of answer options:
+            let optionsArray = [];
+            const randOptions = () => {
+                optionsArray = [
+                    ("<button class='option-btn slytherin-option'>" + allQuestions[i].slytherinOption + "</button>"),
+                    ("<button class='option-btn gryffindor-option'>" + allQuestions[i].gryffindorOption + "</button>"),
+                    ("<button class='option-btn ravenclaw-option'>" + allQuestions[i].ravenclawOption + "</button>"),
+                    ("<button class='option-btn hufflepuff-option'>" + allQuestions[i].hufflepuffOption + "</button>")
+                ];
+
+                // Loop to randomly order items in optionsArray:
+                for (let i = 1; i < optionsArray.length; i++) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [optionsArray[i], optionsArray[j]] = [optionsArray[j], optionsArray[i]];
+                }
+            }
+            randOptions();
+
+            // Display question & its options:
+            questionArea.innerHTML += 
+                "<div class='question'>"
+                + "<header>" + allQuestions[i].question + "</header>"
+                + "<div id='options-area'>"
+                + optionsArray[0]
+                + optionsArray[1]
+                + optionsArray[2]
+                + optionsArray[3]
+                + "</div>"
+                + "</div>"
 
         const houses = ['slytherin', 'gryffindor', 'ravenclaw', 'hufflepuff'];
         for (let house of houses) {
