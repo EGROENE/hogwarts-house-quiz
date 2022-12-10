@@ -67,3 +67,29 @@ body {
     cursor: pointer;
     opacity: 0.8;
 }
+
+.question header {
+    font-size: var(--size-36);
+}
+
+#options-area {
+    display: flex;
+    flex-direction: column;
+}
+
+#options-area button {
+    background: transparent;
+    border: 2px solid white;
+    margin: var(--size-8) 0 var(--size-8) 0;
+    color: white;
+    padding: var(--size-12);
+    font-family: Potterfont, serif;
+    font-size: var(--size-28);
+    letter-spacing: var(--size-4);
+    border-radius: 16px;
+}
+
+#options-area button:hover {
+    cursor: pointer;
+    background: black;
+}
