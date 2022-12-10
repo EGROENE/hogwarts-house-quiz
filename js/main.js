@@ -58,14 +58,14 @@ const styleQA = () => {
     questionArea.style.flexDirection = 'column';
     questionArea.style.textAlign = 'center';
     questionArea.style.alignItems = 'center';
-    questionArea.style.margin = '10% auto 10% auto';
+    questionArea.style.margin = '8% auto 8% auto';
     questionArea.style.background = 'rgba(0, 0, 0, 0.7)';
     questionArea.style.color = 'var(--hp-gold)';
     questionArea.style.fontSize = 'var(--size-24)';
     questionArea.style.width = '75%';
     questionArea.style.letterSpacing = 'var(--size-4)';
     questionArea.style.borderRadius = '24px';
-    questionArea.style.padding = 'var(--size-42)';
+    questionArea.style.padding = 'var(--size-40)';
 }
 
 // Function to style #results-area:
