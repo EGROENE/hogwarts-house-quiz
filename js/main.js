@@ -25,6 +25,14 @@ const setRandBG = () => {
 }
 setRandBG();
 
+const houses = ['slytherin', 'gryffindor', 'ravenclaw', 'hufflepuff'];
+const houseInfo = [
+    {houseName: 'slytherin', houseCrest: './assets/crest-slytherin.png'},
+    {houseName: 'gryffindor', houseCrest: './assets/crest-gryffindor.png'},
+    {houseName: 'ravenclaw', houseCrest: './assets/crest-ravenclaw.png'},
+    {houseName: 'hufflepuff', houseCrest: './assets/crest-hufflepuff.png'}
+]
+
 const greeting = document.getElementById('greeting');
 const questionArea = document.getElementById('question-area');
 const resultsArea = document.getElementById('results-area');
@@ -48,7 +56,7 @@ const allQuestions = [
     { question: 'What is at the core of your wand?', slytherinOption: 'dragon heartstring', gryffindorOption: 'phoenix feather', ravenclawOption: 'veela hair', hufflepuffOption: 'unicorn hair', weight: 2},
     { question: 'What part of Hogwarts are you most eager to explore?', slytherinOption: 'the forbidden forest', gryffindorOption: 'the room of requirement', ravenclawOption: 'the library', hufflepuffOption: 'the kitchen', weight: 2},
     { question: 'Which is your favorite Dumbledore quote?', slytherinOption: '"It matters not what someone is born, but what they grow to be."', gryffindorOption: '"It does not do to dwell on dreams and forget to live."', ravenclawOption: '"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."', hufflepuffOption: '"Pity the living. And above all those who live without love."', weight: 3},
-    { question: 'What type of Zodiac sign do you have?', slytherinOption: 'fire', gryffindorOption: 'earth', ravenclawOption: 'air', hufflepuffOption: 'water', weight: 1},
+    { question: 'What type of Zodiac sign do you have?', slytherinOption: 'fire', gryffindorOption: 'earth', ravenclawOption: 'air', hufflepuffOption: 'water', weight: 1},/* 
     { question: 'How would others describe you?', slytherinOption: 'ambitious', gryffindorOption: 'honorable', ravenclawOption: 'curious', hufflepuffOption: 'humble', weight: 2},
     { question: 'What would you rather be?', slytherinOption: 'praised', gryffindorOption: 'respected', ravenclawOption: 'admired', hufflepuffOption: 'trusted', weight: 3},
     { question: 'You encounter a troll on a bridge you want to cross; how do you deal with it?', slytherinOption: 'kill it', gryffindorOption: 'fight it fairly', ravenclawOption: 'trick it', hufflepuffOption: 'negotiate with it to let you pass', weight: 2},
@@ -56,7 +64,7 @@ const allQuestions = [
     { question: 'Which animal would you rather have as a pet?', slytherinOption: 'lizard', gryffindorOption: 'dog', ravenclawOption: 'cat', hufflepuffOption: 'bunny', weight: 1},
     { question: 'If you could make a potion that would guarantee you one thing, what would it be?', slytherinOption: 'fame', gryffindorOption: 'respect', ravenclawOption: 'wisdom', hufflepuffOption: 'love', weight: 1},
     { question: 'Which is your favorite Dumbledore quote?', slytherinOption: '"It matters not what someone is born, but what they grow to be."', gryffindorOption: '"It does not do to dwell on dreams and forget to live."', ravenclawOption: '"Words are, in my not so humble opinion, our most nexhaustible source of magic."', hufflepuffOption: '"Pity the living. And above all those who live without love."', weight: 3},
-    { question: 'Which house do you hope to be in?', slytherinOption: 'slytherin', gryffindorOption: 'gryffindor', ravenclawOption: 'ravenclaw', hufflepuffOption: 'hufflepuff', weight: 6},
+    { question: 'Which house do you hope to be in?', slytherinOption: 'slytherin', gryffindorOption: 'gryffindor', ravenclawOption: 'ravenclaw', hufflepuffOption: 'hufflepuff', weight: 6} */
 ]
 console.log(allQuestions.length);
 
@@ -129,7 +137,6 @@ const toNext = () => {
                 + "</div>"
                 + "</div>"
 
-        const houses = ['slytherin', 'gryffindor', 'ravenclaw', 'hufflepuff'];
         for (let house of houses) {
             const houseOption = document.querySelector(`.option-btn.${house}-option`);
             houseOption.addEventListener('click', function() {
@@ -169,9 +176,25 @@ const toNext = () => {
                     userHouse = 'hufflepuff';
                     break;
             }
-            resultsArea.innerHTML += 
-            "<header>After much deliberation, the sorting hat has placed you in...</header>"
-            + "<header>" + userHouse.toUpperCase() + "</header>"
+            const displayResult = () => {
+                const resultText = () => {
+                    resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
+                }
+                resultText();
+                const resultHouse = () => {
+                    console.log(userHouse);
+                    for (let house of houseInfo) {
+                        if (userHouse === house.houseName) {
+                            resultsArea.innerHTML += "<div id='house-logo-container'>"
+                            + "<img src='" + house.houseCrest + "'>"
+                            + "</div>"
+                            resultsArea.innerHTML += "<p>" + house.houseName + "</p>";
+                        }
+                    }
+                }
+                resultHouse();
+            }
+            displayResult();
         }
     }
 
