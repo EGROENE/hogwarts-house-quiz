@@ -94,6 +94,16 @@ const styleQA = () => {
 }
 
 // Function to style #results-area:
+const styleResultsArea = () => {
+    resultsArea.style.display = 'flex';
+    resultsArea.style.flexDirection = 'column';
+    resultsArea.style.background = 'rgba(0, 0, 0, 0.7)';
+    resultsArea.style.alignItems = 'center';
+    resultsArea.style.width = '40%';
+    resultsArea.style.color = 'white';
+    resultsArea.style.textAlign = 'center';
+    resultsArea.style.padding = 'var(--size-16)';
+}
 
 const toNext = () => {  
     // Set random BG:
@@ -177,6 +187,7 @@ const toNext = () => {
                     break;
             }
             const displayResult = () => {
+                styleResultsArea();
                 const resultText = () => {
                     resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
                 }
