@@ -15,7 +15,6 @@ const bgImages = [
     'https://images.unsplash.com/photo-1618945034861-7e61e0326e74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njl8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60',
     'https://images.unsplash.com/photo-1498676077434-7540603d2dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODh8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60'
 ]
-console.log(bgImages.length);
 
 // Function to set random img from bgImages as new bg when moving to next question:
 const setRandBG = () => {
@@ -66,7 +65,6 @@ const allQuestions = [
     { question: 'Which is your favorite Dumbledore quote?', slytherinOption: '"It matters not what someone is born, but what they grow to be."', gryffindorOption: '"It does not do to dwell on dreams and forget to live."', ravenclawOption: '"Words are, in my not so humble opinion, our most nexhaustible source of magic."', hufflepuffOption: '"Pity the living. And above all those who live without love."', weight: 3},
     { question: 'Which house do you hope to be in?', slytherinOption: 'slytherin', gryffindorOption: 'gryffindor', ravenclawOption: 'ravenclaw', hufflepuffOption: 'hufflepuff', weight: 6} */
 ]
-console.log(allQuestions.length);
 
 // Initialize variable to tally questions displayed:
 let questionIndex = 0;
@@ -153,21 +151,16 @@ const toNext = () => {
             houseOption.addEventListener('click', function() {
                 if (house === 'slytherin') {
                     slytherinTotal += allQuestions[i].weight;
-                    console.log('SLYTHERIN TOTAL: ' + slytherinTotal);
                 } else if (house === 'gryffindor') {
                     gryffindorTotal += allQuestions[i].weight;
-                    console.log('GRYFFINDOR TOTAL: ' + gryffindorTotal);
                 } else if (house === 'ravenclaw') {
                     ravenclawTotal+= allQuestions[i].weight;
-                    console.log('RAVENCLAW TOTAL: ' + ravenclawTotal);
                 } else {
                     hufflepuffTotal += allQuestions[i].weight;
-                    console.log('HUFFLEPUFF TOTAL: ' + hufflepuffTotal);
                 }
             })
         }
         totalsArray = [slytherinTotal, gryffindorTotal, ravenclawTotal, hufflepuffTotal];
-        console.log(totalsArray);
         } else {
             questionArea.style.display = 'none';
             document.body.style.background = 'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgix.bustle.com%2Frehost%2F2016%2F9%2F13%2F6fe7362a-78fa-4484-933e-5cd0a3215d2f.jpg%3Fw%3D800%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dformat%252Ccompress%26q%3D50%26dpr%3D2&f=1&nofb=1&ipt=f77da5db48dd5f226a9485ba4901b3463f2413a421a4008c3d856a5caf9fd653&ipo=images)';
@@ -188,18 +181,19 @@ const toNext = () => {
                     break;
             }
             const displayResult = () => {
+                // Make #results-area visible, style it:
                 styleResultsArea();
-                /* const resultText = () => {
-                    resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
-                }
-                resultText(); */
+                
+                // Add header to #results-area:
                 resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
+                
+                // Animate above header:
                 const resultHeader = document.querySelector('#results-area header');
                 resultHeader.classList.add('animate__animated');
                 resultHeader.classList.add('animate__fadeInLeft');
 
+                // Logic that displays appropriate house:
                 const resultHouse = () => {
-                    console.log(userHouse);
                     for (let house of houseInfo) {
                         if (userHouse === house.houseName) {
                             resultsArea.innerHTML += "<div id='results-info-container'>"
@@ -212,7 +206,8 @@ const toNext = () => {
                     }
                 }
                 resultHouse();
-                //setTimeout(resultHouse, 3000);
+                
+                // Animate house info:
                 const resultingHouse = document.getElementById('results-info-container');
                 resultingHouse.classList.add('animate__animated');
                 resultingHouse.classList.add('animate__jackInTheBox')
@@ -229,7 +224,6 @@ const toNext = () => {
         btn.addEventListener('click', function() {toNext()});
     }
     questionIndex += 1;
-    console.log(questionIndex);
 }
 
 // Add EL to #start-btn to move to first question:
