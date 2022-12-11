@@ -39,9 +39,26 @@ let hufflepuffTotal = 0;
 const allQuestions = [
     { question: 'Which word below describes you best?', slytherinOption: 'cunning', gryffindorOption: 'brave', ravenclawOption: 'clever', hufflepuffOption: 'friendly', weight: 3},
     { question: 'What\'s your favorite animal?', slytherinOption: 'snake', gryffindorOption: 'lion', ravenclawOption: 'raven', hufflepuffOption: 'badger', weight: 2},
-    { question: 'Which word below describes you best?', slytherinOption: 'cunning', gryffindorOption: 'brave', ravenclawOption: 'clever', hufflepuffOption: 'friendly', weight: 3},
-    { question: 'What\'s your favorite animal?', slytherinOption: 'snake', gryffindorOption: 'lion', ravenclawOption: 'raven', hufflepuffOption: 'badger', weight: 2}
+    { question: 'What\s your favorite color?', slytherinOption: 'green', gryffindorOption: 'scarlet', ravenclawOption: 'blue', hufflepuffOption: 'yellow', weight: 1},
+    { question: 'What do you find the most interesting?', slytherinOption: 'hexes', gryffindorOption: 'broom flying', ravenclawOption: 'transfiguration', hufflepuffOption: 'care of magical creatures', weight: 2},
+    { question: 'Which famous Hogwarts alumnus/alumna would you like to meet?', slytherinOption: 'Tom Riddle', gryffindorOption: 'Albus Dumbledore', ravenclawOption: 'Garrick Olivander', hufflepuffOption: 'Cedric Diggory', weight: 1},
+    { question: 'What\'s your favorite movie genre?', slytherinOption: 'crime', gryffindorOption: 'action', ravenclawOption: 'documentary', hufflepuffOption: 'comedy', weight: 2},
+    { question: 'What do you see yourself in the Mirror of Erised?', slytherinOption: 'with riches', gryffindorOption: 'on an adventure', ravenclawOption: 'with a book', hufflepuffOption: 'with friends & family', weight: 3},
+    { question: 'Of these four, which muggle profession would you choose?', slytherinOption: 'salesperson', gryffindorOption: 'firefighter', ravenclawOption: 'researcher', hufflepuffOption: 'caregiver', weight: 3},
+    { question: 'What is at the core of your wand?', slytherinOption: 'dragon heartstring', gryffindorOption: 'phoenix feather', ravenclawOption: 'veela hair', hufflepuffOption: 'unicorn hair', weight: 2},
+    { question: 'What part of Hogwarts are you most eager to explore?', slytherinOption: 'the forbidden forest', gryffindorOption: 'the room of requirement', ravenclawOption: 'the library', hufflepuffOption: 'the kitchen', weight: 2},
+    { question: 'Which is your favorite Dumbledore quote?', slytherinOption: '"It matters not what someone is born, but what they grow to be."', gryffindorOption: '"It does not do to dwell on dreams and forget to live."', ravenclawOption: '"Words are, in my not so humble opinion, our most nexhaustible source of magic."', hufflepuffOption: '"Pity the living. And above all those who live without love."', weight: 3},
+    { question: 'What type of Zodiac sign do you have?', slytherinOption: 'fire', gryffindorOption: 'earth', ravenclawOption: 'air', hufflepuffOption: 'water', weight: 1},
+    { question: 'How would others describe you?', slytherinOption: 'ambitious', gryffindorOption: 'honorable', ravenclawOption: 'curious', hufflepuffOption: 'humble', weight: 2},
+    { question: 'What would you rather be?', slytherinOption: 'praised', gryffindorOption: 'respected', ravenclawOption: 'admired', hufflepuffOption: 'trusted', weight: 3},
+    { question: 'You encounter a troll on a bridge you want to cross; how do you deal with it?', slytherinOption: 'kill it', gryffindorOption: 'fight it fairly', ravenclawOption: 'trick it', hufflepuffOption: 'negotiate with it to let you pass', weight: 2},
+    { question: 'Which leisure activity is most appealing to you?', slytherinOption: 'improving myself', gryffindorOption: 'trying something new', ravenclawOption: 'reading', hufflepuffOption: 'volunteering', weight: 2},
+    { question: 'Which animal would you rather have as a pet?', slytherinOption: 'lizard', gryffindorOption: 'dog', ravenclawOption: 'cat', hufflepuffOption: 'bunny', weight: 1},
+    { question: 'If you could make a potion that would guarantee you one thing, what would it be?', slytherinOption: 'fame', gryffindorOption: 'respect', ravenclawOption: 'cat', hufflepuffOption: 'bunny', weight: 1},
+    { question: 'Which is your favorite Dumbledore quote?', slytherinOption: '"It matters not what someone is born, but what they grow to be."', gryffindorOption: '"It does not do to dwell on dreams and forget to live."', ravenclawOption: '"Words are, in my not so humble opinion, our most nexhaustible source of magic."', hufflepuffOption: '"Pity the living. And above all those who live without love."', weight: 3},
+    { question: 'Which house do you hope to be in?', slytherinOption: 'slytherin', gryffindorOption: 'gryffindor', ravenclawOption: 'ravenclaw', hufflepuffOption: 'hufflepuff', weight: 6},
 ]
+console.log(allQuestions.length);
 
 // Initialize variable to tally questions displayed:
 let questionIndex = 0;
