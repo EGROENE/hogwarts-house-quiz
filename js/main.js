@@ -206,7 +206,8 @@ const toNext = () => {
                         }
                     }
                 }
-                resultHouse();
+                //resultHouse();
+                setTimeout(resultHouse, 3000)
             }
             displayResult();
         }
