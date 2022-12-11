@@ -189,10 +189,15 @@ const toNext = () => {
             }
             const displayResult = () => {
                 styleResultsArea();
-                const resultText = () => {
+                /* const resultText = () => {
                     resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
                 }
-                resultText();
+                resultText(); */
+                resultsArea.innerHTML += "<header>After much deliberation, the sorting hat has placed you in...</header>"
+                const resultHeader = document.querySelector('#results-area header');
+                resultHeader.classList.add('animate__animated');
+                resultHeader.classList.add('animate__fadeInLeft');
+
                 const resultHouse = () => {
                     console.log(userHouse);
                     for (let house of houseInfo) {
@@ -206,8 +211,11 @@ const toNext = () => {
                         }
                     }
                 }
-                //resultHouse();
-                setTimeout(resultHouse, 3000)
+                resultHouse();
+                //setTimeout(resultHouse, 3000);
+                const resultingHouse = document.getElementById('results-info-container');
+                resultingHouse.classList.add('animate__animated');
+                resultingHouse.classList.add('animate__jackInTheBox')
             }
             displayResult();
         }
