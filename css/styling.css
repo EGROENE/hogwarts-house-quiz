@@ -93,3 +93,26 @@ body {
     cursor: pointer;
     background: black;
 }
+
+#results-area header {
+    font-size: var(--size-36);
+}
+
+#results-info-container {
+    margin-top: var(--size-16);
+}
+
+#house-logo-container {
+    width: 100%;
+    max-width: 100%;
+}
+
+#house-logo-container img {
+    width: 40%;
+}
+
+#results-area p {
+    text-transform: uppercase;
+    color: var(--hp-gold);
+    font-size: 32px;
+}
