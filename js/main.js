@@ -103,6 +103,7 @@ const styleResultsArea = () => {
     resultsArea.style.color = 'white';
     resultsArea.style.textAlign = 'center';
     resultsArea.style.padding = 'var(--size-16)';
+    resultsArea.style.borderRadius = 'var(--size-16)';
 }
 
 const toNext = () => {  
@@ -196,10 +197,12 @@ const toNext = () => {
                     console.log(userHouse);
                     for (let house of houseInfo) {
                         if (userHouse === house.houseName) {
-                            resultsArea.innerHTML += "<div id='house-logo-container'>"
+                            resultsArea.innerHTML += "<div id='results-info-container'>"
+                            +"<div id='house-logo-container'>"
                             + "<img src='" + house.houseCrest + "'>"
                             + "</div>"
-                            resultsArea.innerHTML += "<p>" + house.houseName + "</p>";
+                            + "<p>" + house.houseName + "</p>"
+                            + "</div>"
                         }
                     }
                 }
