@@ -94,6 +94,10 @@ body {
     background: black;
 }
 
+.animate__jackInTheBox {
+    animation-delay: 3s;
+}
+
 #results-area header {
     font-size: var(--size-36);
 }
