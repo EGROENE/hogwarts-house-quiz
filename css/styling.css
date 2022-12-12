@@ -53,10 +53,13 @@ body {
     font-size: var(--size-32);
 }
 
+button {
+    font-family: 'Bellota', cursive;
+}
+
 #start-btn {
     background: transparent;
     color: white;
-    font-family: 'Potterfont';
     border: 2px solid white;
     padding: var(--size-12) var(--size-24);
     font-size: var(--size-24);
@@ -83,7 +86,6 @@ body {
     margin: var(--size-8) 0 var(--size-8) 0;
     color: white;
     padding: var(--size-12);
-    font-family: Potterfont, serif;
     font-size: var(--size-28);
     letter-spacing: var(--size-4);
     border-radius: 16px;
