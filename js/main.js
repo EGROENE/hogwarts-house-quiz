@@ -82,7 +82,7 @@ const styleQA = () => {
     questionArea.style.flexDirection = 'column';
     questionArea.style.textAlign = 'center';
     questionArea.style.alignItems = 'center';
-    questionArea.style.margin = '8% auto 8% auto';
+    //questionArea.style.margin = '8% auto 8% auto';
     questionArea.style.background = 'rgba(0, 0, 0, 0.7)';
     questionArea.style.color = 'var(--hp-gold)';
     questionArea.style.fontSize = 'var(--size-24)';
@@ -98,7 +98,7 @@ const styleResultsArea = () => {
     resultsArea.style.flexDirection = 'column';
     resultsArea.style.background = 'rgba(0, 0, 0, 0.7)';
     resultsArea.style.alignItems = 'center';
-    resultsArea.style.width = '40%';
+    //resultsArea.style.width = '40%';
     resultsArea.style.color = 'white';
     resultsArea.style.textAlign = 'center';
     resultsArea.style.padding = 'var(--size-16)';
