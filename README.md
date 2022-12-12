@@ -1,5 +1,5 @@
 ﻿# hogwarts-house-quiz
-As the name suggests, this web app, which I built using HTML, CSS, & vanilla JavaScript, gives users the chance to see which Hogwarts house they would likely be sorted into. Here's a list of the app's features:
+As the name suggests, this web app, which I built using HTML, CSS, & vanilla JavaScript, gives users the chance to see which Hogwarts house they would likely be sorted into. Here's how it works:
 
 * A random image displays as the page background. I stored several image URLs from Unsplash in an array & looped through it, selecting a random one when the page loads & when a new question displays. I set a particular background on the results page.
 * Upon loading of the page, the user is greeted & prompted to click a button to start the quiz. 
