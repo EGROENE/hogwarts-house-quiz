@@ -138,6 +138,7 @@ const toNext = () => {
             // Display question & its options:
             questionArea.innerHTML += 
                 "<div class='question'>"
+                + "<header>" + (allQuestions.indexOf(allQuestions[i]) + 1) + ' / ' + allQuestions.length + '</header>'
                 + "<header>" + allQuestions[i].question + "</header>"
                 + "<div id='options-area'>"
                 + optionsArray[0]
