@@ -87,7 +87,7 @@ button {
     margin: var(--size-8) 0 var(--size-8) 0;
     color: white;
     padding: var(--size-12);
-    font-size: var(--size-28);
+    font-size: var(--size-20);
     letter-spacing: var(--size-4);
     border-radius: 16px;
 }
