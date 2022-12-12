@@ -69,6 +69,7 @@ button {
 #start-btn:hover {
     cursor: pointer;
     opacity: 0.8;
+    transition: 200ms;
 }
 
 .question header {
@@ -94,6 +95,7 @@ button {
 #options-area button:hover {
     cursor: pointer;
     background: black;
+    transition: 200ms;
 }
 
 .animate__jackInTheBox {
