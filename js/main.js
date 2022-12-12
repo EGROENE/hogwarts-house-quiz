@@ -47,7 +47,7 @@ let hufflepuffTotal = 0;
 const allQuestions = [
     { question: 'Which word below describes you best?', slytherinOption: 'cunning', gryffindorOption: 'brave', ravenclawOption: 'clever', hufflepuffOption: 'friendly', weight: 3},
     { question: 'What\'s your favorite animal?', slytherinOption: 'snake', gryffindorOption: 'lion', ravenclawOption: 'raven', hufflepuffOption: 'badger', weight: 2},
-    { question: 'What\s your favorite color?', slytherinOption: 'green', gryffindorOption: 'scarlet', ravenclawOption: 'blue', hufflepuffOption: 'yellow', weight: 1},
+    { question: 'What\'s your favorite color?', slytherinOption: 'green', gryffindorOption: 'scarlet', ravenclawOption: 'blue', hufflepuffOption: 'yellow', weight: 1},
     { question: 'What do you find the most interesting?', slytherinOption: 'hexes', gryffindorOption: 'broom flying', ravenclawOption: 'transfiguration', hufflepuffOption: 'care of magical creatures', weight: 2},
     { question: 'Which famous Hogwarts alumnus/alumna would you like to meet?', slytherinOption: 'Tom Riddle', gryffindorOption: 'Albus Dumbledore', ravenclawOption: 'Garrick Olivander', hufflepuffOption: 'Cedric Diggory', weight: 1},
     { question: 'What\'s your favorite movie genre?', slytherinOption: 'crime', gryffindorOption: 'action', ravenclawOption: 'documentary', hufflepuffOption: 'comedy', weight: 2},
