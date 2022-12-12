@@ -21,6 +21,7 @@ const setRandBG = () => {
     let randNum = Math.floor(Math.random() * bgImages.length);
     document.body.style.background = 'url(' + bgImages[randNum] + ')';
     document.body.style.backgroundSize = 'cover';
+    document.body.style.backgroundAttachment = 'fixed';
 }
 setRandBG();
 
@@ -165,6 +166,7 @@ const toNext = () => {
             questionArea.style.display = 'none';
             document.body.style.background = 'url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgix.bustle.com%2Frehost%2F2016%2F9%2F13%2F6fe7362a-78fa-4484-933e-5cd0a3215d2f.jpg%3Fw%3D800%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dformat%252Ccompress%26q%3D50%26dpr%3D2&f=1&nofb=1&ipt=f77da5db48dd5f226a9485ba4901b3463f2413a421a4008c3d856a5caf9fd653&ipo=images)';
             document.body.style.backgroundSize = 'cover';
+            document.body.style.backgroundAttachment = 'fixed';
             let max = Math.max(...totalsArray);
             let userHouse = '';
             switch(totalsArray.indexOf(max)) {
