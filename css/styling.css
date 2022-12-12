@@ -76,6 +76,10 @@ button {
     font-size: var(--size-36);
 }
 
+.question header:first-child {
+    color: silver;
+}
+
 #options-area {
     display: flex;
     flex-direction: column;
