@@ -51,7 +51,7 @@ const allQuestions = [
     { question: 'What do you find the most interesting?', slytherinOption: 'hexes', gryffindorOption: 'broom flying', ravenclawOption: 'transfiguration', hufflepuffOption: 'care of magical creatures', weight: 2},
     { question: 'Which famous Hogwarts alumnus/alumna would you like to meet?', slytherinOption: 'Tom Riddle', gryffindorOption: 'Albus Dumbledore', ravenclawOption: 'Garrick Olivander', hufflepuffOption: 'Cedric Diggory', weight: 1},
     { question: 'What\'s your favorite movie genre?', slytherinOption: 'crime', gryffindorOption: 'action', ravenclawOption: 'documentary', hufflepuffOption: 'comedy', weight: 2},
-    { question: 'What do you see yourself in the Mirror of Erised?', slytherinOption: 'with riches', gryffindorOption: 'on an adventure', ravenclawOption: 'with a book', hufflepuffOption: 'with friends & family', weight: 3},
+    { question: 'How do you see yourself in the Mirror of Erised?', slytherinOption: 'with riches', gryffindorOption: 'on an adventure', ravenclawOption: 'with a book', hufflepuffOption: 'with friends & family', weight: 3},
     { question: 'Of these four, which muggle profession would you choose?', slytherinOption: 'salesperson', gryffindorOption: 'firefighter', ravenclawOption: 'researcher', hufflepuffOption: 'caregiver', weight: 3},
     { question: 'What is at the core of your wand?', slytherinOption: 'dragon heartstring', gryffindorOption: 'phoenix feather', ravenclawOption: 'veela hair', hufflepuffOption: 'unicorn hair', weight: 2},
     { question: 'What part of Hogwarts are you most eager to explore?', slytherinOption: 'the forbidden forest', gryffindorOption: 'the room of requirement', ravenclawOption: 'the library', hufflepuffOption: 'the kitchen', weight: 2},
