@@ -1,24 +1,22 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import "./style.css";
+import { bgImages } from "./constants";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+/* document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
+<div id="greeting">
+<h1>Ever wonder which Hogwarts House you belong in?</h1>
+<h2>Take the quiz to find out!</h2>
+<button id="start-btn">Start Quiz!</button>
+</div>
+<div id="question-area"></div>
+<div id="results-area"></div>
+`; */
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+/* Functionality to change bg image (applied to body, maybe. if you don't want to break that unwritten rule, apply to #app) */
+const app = document.querySelector<HTMLElement>("#app");
+const setRandBG = (): void => {
+  let randNum = Math.floor(Math.random() * bgImages.length);
+  app!.style.background = "url(" + bgImages[randNum] + ")";
+  app!.style.backgroundSize = "cover";
+  app!.style.backgroundAttachment = "fixed";
+};
+setRandBG();
