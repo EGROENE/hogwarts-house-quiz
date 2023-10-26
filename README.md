@@ -1,4 +1,7 @@
 ﻿# hogwarts-house-quiz
+
+## As of October 26, 2023, I am working on not only improving my code, but also converting the JavaScript to TypeScript. The deployed version will continue to run based on the old code, as it is functional, until I complete the revised version. Stay tuned...
+ 
 As the name suggests, this web app, which I built using HTML, CSS, & vanilla JavaScript, gives users the chance to see which Hogwarts House they would likely be sorted into. Here's how it works:
 
 * A random image displays as the page background. I stored several image URLs from Unsplash in an array & looped through it, selecting a random one when the page loads & when a new question displays. I set a particular background on the results page.
