@@ -29,7 +29,7 @@ const shuffleArray = (array: [string, string][]) => {
   return array;
 };
 
-// Function to calculate points upon user answering question:
+// Functionality to calculate points upon user answering question:
 const housesAndTheirTotals: { [key: string]: number } = {
   slytherin: 0,
   gryffindor: 0,
@@ -56,6 +56,7 @@ const proceed = (): void => {
   // If current question exists:
   if (allQuestions[currentIndex]) {
     // Create button for every answer option of current question:
+    // Must be added to innerHTML as a string
     let answerOptions: string = "";
     const randomizedOptions = shuffleArray(
       Object.entries(allQuestions[currentIndex].answers)
@@ -68,6 +69,7 @@ const proceed = (): void => {
     if (currentIndex > 0 && currentIndex !== allQuestions.length) {
       questionArea!.innerHTML = "";
     }
+
     // Populate questionArea with info from current question:
     questionArea!.innerHTML += `
         <div class="question">
@@ -106,6 +108,7 @@ const proceed = (): void => {
       const highestScore = Math.max(...houseTotals);
       return housesInfo[houseTotals.indexOf(highestScore)];
     };
+
     // Remove question area from DOM, as all questions have been answered:
     app!.removeChild(questionArea!);
 
