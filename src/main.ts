@@ -21,14 +21,13 @@ const questionArea = document.querySelector<HTMLElement>("#question-area");
 
 const resultsArea = document.querySelector<HTMLElement>("#results-area");
 
-// Call on array of html elems corresponding to answer options
-/* const shuffleArray = (array) => {
+const shuffleArray = (array: [string, string][]) => {
   for (let i = 1; i < array.length; i++) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
-}; */
+};
 
 // Function to calculate points upon user answering question:
 const houseTotals: number[] = housesInfo.map((house) => house.count);
@@ -63,7 +62,10 @@ const proceed = (): void => {
   if (allQuestions[currentIndex]) {
     // Create button for every answer option of current question:
     let answerOptions: string = "";
-    for (const option of Object.entries(allQuestions[currentIndex].answers)) {
+    const randomizedOptions = shuffleArray(
+      Object.entries(allQuestions[currentIndex].answers)
+    );
+    for (const option of randomizedOptions) {
       answerOptions += `<button class="option-btn" id="${option[0]}">${option[1]}</button>`;
     }
 
