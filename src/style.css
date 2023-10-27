@@ -28,6 +28,12 @@
 
 body {
   font-family: Potterfont, serif;
+  margin: 0;
+  /* overflow-y: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 #greeting {
@@ -70,6 +76,20 @@ button {
   cursor: pointer;
   opacity: 0.8;
   transition: 200ms;
+}
+
+#question-area {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--hp-gold);
+  font-size: var(--size-24);
+  width: 75%;
+  letter-spacing: var(--size-4);
+  border-radius: 24px;
+  padding: var(--size-40);
 }
 
 .question header {
