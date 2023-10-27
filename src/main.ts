@@ -31,10 +31,10 @@ const shuffleArray = (array: [string, string][]) => {
 
 // Functionality to calculate points upon user answering question:
 const housesAndTheirTotals: { [key: string]: number } = {
-  slytherin: 0,
-  gryffindor: 0,
-  ravenclaw: 0,
-  hufflepuff: 0,
+  [`${housesInfo[0].houseName.toLowerCase()}`]: 0,
+  [`${housesInfo[1].houseName.toLowerCase()}`]: 0,
+  [`${housesInfo[2].houseName.toLowerCase()}`]: 0,
+  [`${housesInfo[3].houseName.toLowerCase()}`]: 0,
 };
 
 const allocatePoints = (house: string, weight: number): void => {
