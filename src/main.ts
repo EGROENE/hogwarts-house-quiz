@@ -1,17 +1,7 @@
 import "./style.css";
 import { bgImages, housesInfo, allQuestions } from "./constants";
 
-/* document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-<div id="greeting">
-<h1>Ever wonder which Hogwarts House you belong in?</h1>
-<h2>Take the quiz to find out!</h2>
-<button id="start-btn">Start Quiz!</button>
-</div>
-<div id="question-area"></div>
-<div id="results-area"></div>
-`; */
-
-/* Functionality to change bg image (applied to body, maybe. if you don't want to break that unwritten rule, apply to #app) */
+// Functionality to change bg image
 const setRandBG = (): void => {
   let randNum = Math.floor(Math.random() * bgImages.length);
   document.body.style.backgroundImage = "url(" + bgImages[randNum] + ")";
@@ -20,27 +10,12 @@ const setRandBG = (): void => {
 };
 setRandBG();
 
-// "next" functionality:
-// DOM = "app" element
-// Remove from DOM the greeting when going to first question
-// Add to DOM the question area when going to first question
-// Remove from DOM the question area when going to results:
 let currentIndex: number = -1;
 
 // DOM Elements:
 const app = document.querySelector<HTMLElement>("#app");
 const greeting: HTMLElement = document.querySelector<HTMLElement>("#greeting")!;
 const startBtn: HTMLElement = document.querySelector("#start-btn")!;
-
-// If using commented-out declarations below, comment out #question-area & #results-area in index.html
-// Will see errors, but maybe try to work through them. The point of creating these elems here is to add them as needed to the DOM.
-/* const questionArea: HTMLElement = document
-  .createElement("div")
-  .setAttribute("id", "question-area")!; */
-
-/* const resultsArea: HTMLElement = document
-  .createElement("div")
-  .setAttribute("id", "results-area")!; */
 
 const questionArea = document.querySelector<HTMLElement>("#question-area");
 
@@ -70,7 +45,6 @@ const allocatePoints = (house: string, weight: number): void => {
   if (house === "hufflepuff") {
     houseTotals[3] += weight;
   }
-  console.log(houseTotals);
 };
 
 // Call this on start button on init page & on next btn of each question
@@ -85,6 +59,7 @@ const proceed = (): void => {
     questionArea!.style.display = "flex";
   }
 
+  // If current question exists:
   if (allQuestions[currentIndex]) {
     // Create button for every answer option of current question:
     let answerOptions: string = "";
@@ -92,16 +67,11 @@ const proceed = (): void => {
       answerOptions += `<button class="option-btn" id="${option[0]}">${option[1]}</button>`;
     }
 
-    /* if (currentIndex === 0) {
-      app!.removeChild(greeting);
-      //app!.appendChild(questionArea);
-      questionArea!.style.display = "flex";
-    } */
-
+    // Clear info from previous question:
     if (currentIndex > 0 && currentIndex !== allQuestions.length) {
       questionArea!.innerHTML = "";
     }
-    // populate questionArea w/ info from first question:
+    // Populate questionArea with info from current question:
     questionArea!.innerHTML += `
         <div class="question">
         <header>${allQuestions.indexOf(allQuestions[currentIndex]) + 1} / ${
@@ -117,6 +87,7 @@ const proceed = (): void => {
         </div>
       `;
 
+    // Upon click of any answer button, calculate house point totals, proceed to next question or results:
     const answerButtons = document.querySelectorAll(".option-btn");
     for (const button of answerButtons) {
       button.addEventListener("click", () => {
@@ -128,26 +99,34 @@ const proceed = (): void => {
 
   // Upon answering last question:
   if (currentIndex === allQuestions.length) {
-    const selectedHouse = (): string => {
+    const selectedHouse = (): {
+      houseName: string;
+      houseCrest: string;
+      count: number;
+    } => {
       const highestScore = Math.max(...houseTotals);
-      if (houseTotals.indexOf(highestScore) === 0) {
-        return "Slytherin";
-      }
-      if (houseTotals.indexOf(highestScore) === 1) {
-        return "Gryffindor";
-      }
-      if (houseTotals.indexOf(highestScore) === 2) {
-        return "Ravenclaw";
-      }
-      return "Hufflepuff";
+      return housesInfo[houseTotals.indexOf(highestScore)];
     };
-    // Call function to handle points after answer:
-
+    // Remove question area from DOM, as all questions have been answered:
     app!.removeChild(questionArea!);
+
+    // Set background image to sorting hat:
+    document.body.style.backgroundImage =
+      "url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgix.bustle.com%2Frehost%2F2016%2F9%2F13%2F6fe7362a-78fa-4484-933e-5cd0a3215d2f.jpg%3Fw%3D800%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dformat%252Ccompress%26q%3D50%26dpr%3D2&f=1&nofb=1&ipt=f77da5db48dd5f226a9485ba4901b3463f2413a421a4008c3d856a5caf9fd653&ipo=images)";
+
+    // Unhide results area:
+    resultsArea!.style.display = "flex";
+
+    // Populate results area:
     resultsArea!.innerHTML += `
       <header>After much deliberation, the sorting hat has decided to place you in...</header>
-      ${selectedHouse()}
-    `;
+      <div id="results-info-container">
+        <div id="house-logo-container">
+        <img src="${selectedHouse().houseCrest}">
+        </div>
+        <p>${selectedHouse().houseName}</p>
+      </div>
+      `;
   }
 };
 
