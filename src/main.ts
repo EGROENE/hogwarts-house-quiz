@@ -30,20 +30,15 @@ const shuffleArray = (array: [string, string][]) => {
 };
 
 // Function to calculate points upon user answering question:
-const houseTotals: number[] = housesInfo.map((house) => house.count);
+const housesAndTheirTotals: { [key: string]: number } = {
+  slytherin: 0,
+  gryffindor: 0,
+  ravenclaw: 0,
+  hufflepuff: 0,
+};
+
 const allocatePoints = (house: string, weight: number): void => {
-  if (house === "slytherin") {
-    houseTotals[0] += weight;
-  }
-  if (house === "gryffindor") {
-    houseTotals[1] += weight;
-  }
-  if (house === "ravenclaw") {
-    houseTotals[2] += weight;
-  }
-  if (house === "hufflepuff") {
-    houseTotals[3] += weight;
-  }
+  housesAndTheirTotals[`${house}`] += weight;
 };
 
 // Call this on start button on init page & on next btn of each question
@@ -104,8 +99,10 @@ const proceed = (): void => {
     const selectedHouse = (): {
       houseName: string;
       houseCrest: string;
-      count: number;
     } => {
+      const houseTotals = Object.values(housesAndTheirTotals).map(
+        (score) => score
+      );
       const highestScore = Math.max(...houseTotals);
       return housesInfo[houseTotals.indexOf(highestScore)];
     };
