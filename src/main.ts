@@ -56,7 +56,22 @@ const resultsArea = document.querySelector<HTMLElement>("#results-area");
 }; */
 
 // Function to calculate points upon user answering question:
-const allocatePoints = (): void => {};
+const houseTotals: number[] = housesInfo.map((house) => house.count);
+const allocatePoints = (house: string, weight: number): void => {
+  if (house === "slytherin") {
+    houseTotals[0] += weight;
+  }
+  if (house === "gryffindor") {
+    houseTotals[1] += weight;
+  }
+  if (house === "ravenclaw") {
+    houseTotals[2] += weight;
+  }
+  if (house === "hufflepuff") {
+    houseTotals[3] += weight;
+  }
+  console.log(houseTotals);
+};
 
 // Call this on start button on init page & on next btn of each question
 // Maybe divide this into toNextQuestion & toResults functions or something to make it more concise, like making separate func to populate innerHTML
@@ -65,66 +80,74 @@ const proceed = (): void => {
 
   setRandBG();
 
-  //const randomizedOptions = shuffleArray(Object.entries(allQuestions[currentIndex].answers));
-
-  //const optionsArea = `<div id="options-area"></div>`;
-
-  let answerOptions: string = "";
-  // Add onClick to each button generated below.
-  for (const option of Object.entries(allQuestions[currentIndex].answers)) {
-    answerOptions += `<button class="option-btn ${option[0]}-option">${option[1]}</button>`;
-  }
-
-  // Upon starting quiz:
   if (currentIndex === 0) {
     app!.removeChild(greeting);
-    //app!.appendChild(questionArea);
     questionArea!.style.display = "flex";
-    // populate questionArea w/ info from first question:
-    questionArea!.innerHTML += `
-      <div class="question">
-      <header>${allQuestions.indexOf(allQuestions[currentIndex]) + 1} / ${
-      allQuestions.length
-    }
-      </header>
-      <header>
-      ${allQuestions[currentIndex].question}
-      </header>
-      <div id="options-area">
-      ${answerOptions}
-      </div>
-      </div>
-    `;
   }
 
-  // Upon moving from one question to another:
-  if (currentIndex >= 0 && currentIndex < allQuestions.length - 1) {
-    // Call function to handle points after answer:
+  if (allQuestions[currentIndex]) {
+    // Create button for every answer option of current question:
+    let answerOptions: string = "";
+    for (const option of Object.entries(allQuestions[currentIndex].answers)) {
+      answerOptions += `<button class="option-btn" id="${option[0]}">${option[1]}</button>`;
+    }
 
-    // clear inner HTML of questionArea, then add info for currentIndex of allQuestions to it
-    questionArea!.innerHTML = "";
+    /* if (currentIndex === 0) {
+      app!.removeChild(greeting);
+      //app!.appendChild(questionArea);
+      questionArea!.style.display = "flex";
+    } */
+
+    if (currentIndex > 0 && currentIndex !== allQuestions.length) {
+      questionArea!.innerHTML = "";
+    }
+    // populate questionArea w/ info from first question:
     questionArea!.innerHTML += `
-      <div class="question">
-      <header>${allQuestions.indexOf(allQuestions[currentIndex]) + 1} / ${
+        <div class="question">
+        <header>${allQuestions.indexOf(allQuestions[currentIndex]) + 1} / ${
       allQuestions.length
     }
-      </header>
-      <header>
-      ${allQuestions[currentIndex].question}
-      </header>
-      <div id="options-area">
-      ${answerOptions}
-      </div>
-      </div>
-    `;
+        </header>
+        <header>
+        ${allQuestions[currentIndex].question}
+        </header>
+        <div id="options-area">
+        ${answerOptions}
+        </div>
+        </div>
+      `;
+
+    const answerButtons = document.querySelectorAll(".option-btn");
+    for (const button of answerButtons) {
+      button.addEventListener("click", () => {
+        allocatePoints(button.id, allQuestions[currentIndex].weight);
+        proceed();
+      });
+    }
   }
 
   // Upon answering last question:
-  if (currentIndex === allQuestions.length - 1) {
+  if (currentIndex === allQuestions.length) {
+    const selectedHouse = (): string => {
+      const highestScore = Math.max(...houseTotals);
+      if (houseTotals.indexOf(highestScore) === 0) {
+        return "Slytherin";
+      }
+      if (houseTotals.indexOf(highestScore) === 1) {
+        return "Gryffindor";
+      }
+      if (houseTotals.indexOf(highestScore) === 2) {
+        return "Ravenclaw";
+      }
+      return "Hufflepuff";
+    };
     // Call function to handle points after answer:
 
     app!.removeChild(questionArea!);
-    app!.appendChild(resultsArea!);
+    resultsArea!.innerHTML += `
+      <header>After much deliberation, the sorting hat has decided to place you in...</header>
+      ${selectedHouse()}
+    `;
   }
 };
 
