@@ -46,11 +46,34 @@ const questionArea = document.querySelector<HTMLElement>("#question-area");
 
 const resultsArea = document.querySelector<HTMLElement>("#results-area");
 
+// Call on array of html elems corresponding to answer options
+/* const shuffleArray = (array) => {
+  for (let i = 1; i < array.length; i++) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}; */
+
+// Function to calculate points upon user answering question:
+const allocatePoints = (): void => {};
+
 // Call this on start button on init page & on next btn of each question
 // Maybe divide this into toNextQuestion & toResults functions or something to make it more concise, like making separate func to populate innerHTML
 const proceed = (): void => {
   currentIndex++;
+
   setRandBG();
+
+  //const randomizedOptions = shuffleArray(Object.entries(allQuestions[currentIndex].answers));
+
+  //const optionsArea = `<div id="options-area"></div>`;
+
+  let answerOptions: string = "";
+  // Add onClick to each button generated below.
+  for (const option of Object.entries(allQuestions[currentIndex].answers)) {
+    answerOptions += `<button class="option-btn ${option[0]}-option">${option[1]}</button>`;
+  }
 
   // Upon starting quiz:
   if (currentIndex === 0) {
@@ -68,25 +91,16 @@ const proceed = (): void => {
       ${allQuestions[currentIndex].question}
       </header>
       <div id="options-area">
-      <button class="option-btn slytherin-option">
-      ${allQuestions[currentIndex].slytherinOption}
-      </button>
-      <button class="option-btn gryffindor-option">
-      ${allQuestions[currentIndex].gryffindorOption}
-      </button>
-      <button class="option-btn ravenclaw-option">
-      ${allQuestions[currentIndex].ravenclawOption}
-      </button>
-      <button class="option-btn hufflepuff-option">
-      ${allQuestions[currentIndex].hufflepuffOption}
-      </button>
+      ${answerOptions}
       </div>
       </div>
     `;
   }
 
   // Upon moving from one question to another:
-  if (currentIndex > 0 && currentIndex < allQuestions.length - 1) {
+  if (currentIndex >= 0 && currentIndex < allQuestions.length - 1) {
+    // Call function to handle points after answer:
+
     // clear inner HTML of questionArea, then add info for currentIndex of allQuestions to it
     questionArea!.innerHTML = "";
     questionArea!.innerHTML += `
@@ -99,10 +113,7 @@ const proceed = (): void => {
       ${allQuestions[currentIndex].question}
       </header>
       <div id="options-area">
-      ${allQuestions[currentIndex].slytherinOption}
-      ${allQuestions[currentIndex].gryffindorOption}
-      ${allQuestions[currentIndex].hufflepuffOption}
-      ${allQuestions[currentIndex].ravenclawOption}
+      ${answerOptions}
       </div>
       </div>
     `;
@@ -110,6 +121,8 @@ const proceed = (): void => {
 
   // Upon answering last question:
   if (currentIndex === allQuestions.length - 1) {
+    // Call function to handle points after answer:
+
     app!.removeChild(questionArea!);
     app!.appendChild(resultsArea!);
   }
