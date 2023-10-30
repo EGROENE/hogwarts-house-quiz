@@ -15,7 +15,8 @@ let currentIndex: number = -1;
 // DOM Elements:
 const app = document.querySelector<HTMLElement>("#app");
 const greeting: HTMLElement = document.querySelector<HTMLElement>("#greeting")!;
-const startBtn: HTMLElement = document.querySelector("#start-btn")!;
+const startBtn: HTMLElement =
+  document.querySelector<HTMLElement>("#start-btn")!;
 
 const questionArea = document.querySelector<HTMLElement>("#question-area");
 
@@ -48,13 +49,14 @@ const proceed = (): void => {
 
   setRandBG();
 
-  if (currentIndex === 0) {
-    app!.removeChild(greeting);
-    questionArea!.style.display = "flex";
-  }
-
   // If current question exists:
   if (allQuestions[currentIndex]) {
+    if (currentIndex === 0) {
+      // Upon moving to first question, remove greeting from DOM, display question area:
+      app!.removeChild(greeting);
+      questionArea!.style.display = "flex";
+    }
+
     // Create button for every answer option of current question:
     // Must be added to innerHTML as a string
     let answerOptions: string = "";
