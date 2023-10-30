@@ -5,8 +5,6 @@ import { bgImages, housesInfo, allQuestions } from "./constants";
 const setRandBG = (): void => {
   let randNum = Math.floor(Math.random() * bgImages.length);
   document.body.style.backgroundImage = "url(" + bgImages[randNum] + ")";
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundAttachment = "fixed";
 };
 setRandBG();
 
