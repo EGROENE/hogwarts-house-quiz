@@ -50,11 +50,11 @@ const allocatePoints = (house: string, weight: number): void => {
 
 // HANDLE USER'S SELECTION FOR LENGTH OF QUIZ:
 // Initialize quizLength variable:
-let quizLength: number = 4;
+let quizLength: number = 30;
 // If user selects short version, change quizLength accordingly:
 const handleLengthSelection = (version: string): void => {
   if (version === "short") {
-    quizLength = 2;
+    quizLength = 15;
   }
 };
 //////////////////////////////////////////////////////////////////
@@ -231,7 +231,7 @@ let questionsNotOnHousePreference = shuffleArray(
 // Populate questionArray:
 const getQuestionArray = (): void => {
   // Depending on length that the user selects, push questions that are not about user preference to questionsArray:
-  for (let i = 0; i < quizLength; i++) {
+  for (let i = 0; i < quizLength - 1; i++) {
     questionsArray.push(questionsNotOnHousePreference[i]);
   }
 
