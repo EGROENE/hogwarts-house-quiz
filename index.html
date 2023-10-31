@@ -34,12 +34,18 @@
       <div id="greeting">
         <h1>Ever wonder which Hogwarts House you belong in?</h1>
         <h2>Take the quiz to find out!</h2>
-        <button id="start-btn">Start Quiz!</button>
+        <div id="length-selector-btns-container">
+          <button class="length-selector-btn" id="short">
+            Short Version <br />(15 questions)
+          </button>
+          <button class="length-selector-btn" id="long">
+            Long Version<br />(30 questions)
+          </button>
+        </div>
       </div>
       <div id="question-area"></div>
       <div id="results-area"></div>
     </div>
     <script type="module" src="/src/main.ts"></script>
-    <!-- <script src="./js/main.js"></script> -->
   </body>
 </html>
