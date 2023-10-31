@@ -29,7 +29,6 @@
 body {
   font-family: Potterfont, serif;
   margin: 0;
-  /* overflow-y: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
