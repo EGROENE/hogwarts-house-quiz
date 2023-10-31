@@ -150,9 +150,7 @@ const proceed = (): void => {
     resultsArea!.innerHTML += `
       <header>After much deliberation, the sorting hat has decided to place you in...</header>
       <div id="results-info-container">
-        <div id="house-logo-container">
         <img src="${selectedHouse().houseCrest}">
-        </div>
         <p>${selectedHouse().houseName}</p>
         </div>
         <button id="retake-quiz-btn" onclick="window.location.reload()">Retake Quiz!</button>
