@@ -100,7 +100,6 @@ const proceed = (): void => {
       questionsArray.length
     }
         </header>
-        </header>${quizLength}</header>
         <header>
         ${questionsArray[currentIndex].question}
         </header>
