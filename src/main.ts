@@ -42,13 +42,16 @@ const housesAndTheirTotals: { [key: string]: number } = {
   [`${housesInfo[2].houseName.toLowerCase()}`]: 0,
   [`${housesInfo[3].houseName.toLowerCase()}`]: 0,
 };
+// Function to increment a certain house total by the weight of a given question:
 const allocatePoints = (house: string, weight: number): void => {
   housesAndTheirTotals[`${house}`] += weight;
 };
 //////////////////////////////////////////////////////////////////
 
 // HANDLE USER'S SELECTION FOR LENGTH OF QUIZ:
+// Initialize quizLength variable:
 let quizLength: number = 4;
+// If user selects short version, change quizLength accordingly:
 const handleLengthSelection = (version: string): void => {
   if (version === "short") {
     quizLength = 2;
@@ -121,6 +124,7 @@ const proceed = (): void => {
 
   // Upon answering last question:
   if (currentIndex === questionsArray.length) {
+    // Return house object of house with highest tally, from housesInfo
     const selectedHouse = (): {
       houseName: string;
       houseCrest: string;
