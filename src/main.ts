@@ -72,8 +72,8 @@ const proceed = (): void => {
 
   // If current question exists:
   if (questionsArray[currentIndex]) {
+    // Upon moving to first question, remove greeting from DOM, display question area:
     if (currentIndex === 0) {
-      // Upon moving to first question, remove greeting from DOM, display question area:
       app!.removeChild(greeting);
       questionArea!.style.display = "flex";
     }
