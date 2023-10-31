@@ -21,190 +21,335 @@ export const housesInfo = [
   {
     houseName: "Slytherin",
     houseCrest: "./assets/crest-slytherin.png",
-    count: 0,
   },
   {
     houseName: "Gryffindor",
     houseCrest: "./assets/crest-gryffindor.png",
-    count: 0,
   },
   {
     houseName: "Ravenclaw",
     houseCrest: "./assets/crest-ravenclaw.png",
-    count: 0,
   },
   {
     houseName: "Hufflepuff",
     houseCrest: "./assets/crest-hufflepuff.png",
-    count: 0,
   },
 ];
 
 export const allQuestions = [
-  /* {
+  {
     question: "Which word below describes you best?",
-    slytherinOption: "cunning",
-    gryffindorOption: "brave",
-    ravenclawOption: "clever",
-    hufflepuffOption: "friendly",
-    weight: 3,
+    answers: {
+      slytherin: "Cunning",
+      gryffindor: "Brave",
+      ravenclaw: "Clever",
+      hufflepuff: "Friendly",
+    },
+    weight: 4,
   },
   {
-    question: "What's your favorite animal?",
-    slytherinOption: "snake",
-    gryffindorOption: "lion",
-    ravenclawOption: "raven",
-    hufflepuffOption: "badger",
+    question: "Of these, which animal do you like best?",
+    answers: {
+      slytherin: "Snake",
+      gryffindor: "Lion",
+      ravenclaw: "Raven",
+      hufflepuff: "Badger",
+    },
     weight: 2,
   },
   {
     question: "What's your favorite color?",
-    slytherinOption: "green",
-    gryffindorOption: "scarlet",
-    ravenclawOption: "blue",
-    hufflepuffOption: "yellow",
+    answers: {
+      slytherin: "Green",
+      gryffindor: "Scarlet",
+      ravenclaw: "Blue",
+      hufflepuff: "Yellow",
+    },
     weight: 1,
   },
   {
     question: "What do you find the most interesting?",
-    slytherinOption: "hexes",
-    gryffindorOption: "broom flying",
-    ravenclawOption: "transfiguration",
-    hufflepuffOption: "care of magical creatures",
+    answers: {
+      slytherin: "Hexes",
+      gryffindor: "Broom Flying",
+      ravenclaw: "Transfiguration",
+      hufflepuff: "Care of Magical Creatures",
+    },
     weight: 2,
   },
   {
     question: "Which famous Hogwarts alumnus/alumna would you like to meet?",
-    slytherinOption: "Tom Riddle",
-    gryffindorOption: "Albus Dumbledore",
-    ravenclawOption: "Garrick Olivander",
-    hufflepuffOption: "Cedric Diggory",
+    answers: {
+      slytherin: "Tom Riddle",
+      gryffindor: "Albus Dumbledore",
+      ravenclaw: "Garrick Olivander",
+      hufflepuff: "Cedric Diggory",
+    },
     weight: 1,
   },
   {
     question: "What's your favorite movie genre?",
-    slytherinOption: "crime",
-    gryffindorOption: "action",
-    ravenclawOption: "documentary",
-    hufflepuffOption: "comedy",
+    answers: {
+      slytherin: "Crime",
+      gryffindor: "Action",
+      ravenclaw: "Documentary",
+      hufflepuff: "Comedy",
+    },
     weight: 2,
   },
   {
     question: "How do you see yourself in the Mirror of Erised?",
-    slytherinOption: "with riches",
-    gryffindorOption: "on an adventure",
-    ravenclawOption: "with a book",
-    hufflepuffOption: "with friends & family",
+    answers: {
+      slytherin: "with riches",
+      gryffindor: "on an adventure",
+      ravenclaw: "with a book",
+      hufflepuff: "with friends & family",
+    },
     weight: 3,
   },
   {
     question: "Of these four, which muggle profession would you choose?",
-    slytherinOption: "salesperson",
-    gryffindorOption: "firefighter",
-    ravenclawOption: "researcher",
-    hufflepuffOption: "caregiver",
+    answers: {
+      slytherin: "Salesperson",
+      gryffindor: "Firefighter",
+      ravenclaw: "Researcher",
+      hufflepuff: "Caregiver",
+    },
     weight: 3,
   },
   {
     question: "What is at the core of your wand?",
-    slytherinOption: "dragon heartstring",
-    gryffindorOption: "phoenix feather",
-    ravenclawOption: "veela hair",
-    hufflepuffOption: "unicorn hair",
+    answers: {
+      slytherin: "Dragon heartstring",
+      gryffindor: "Phoenix feather",
+      ravenclaw: "Veela hair",
+      hufflepuff: "Unicorn hair",
+    },
     weight: 2,
   },
   {
     question: "What part of Hogwarts are you most eager to explore?",
-    slytherinOption: "the forbidden forest",
-    gryffindorOption: "the room of requirement",
-    ravenclawOption: "the library",
-    hufflepuffOption: "the kitchen",
-    weight: 2,
+    answers: {
+      slytherin: "The Forbidden Forest",
+      gryffindor: "The Room of Requirement",
+      ravenclaw: "The Library",
+      hufflepuff: "The Kitchen",
+    },
+    weight: 1,
+  },
+  {
+    question: "What do you find most attractive in a partner?",
+    answers: {
+      slytherin: "Ambition",
+      gryffindor: "Sense of adventure",
+      ravenclaw: "Intellect",
+      hufflepuff: "Kindness",
+    },
+    weight: 4,
   },
   {
     question: "Which is your favorite Dumbledore quote?",
-    slytherinOption:
-      '"It matters not what someone is born, but what they grow to be."',
-    gryffindorOption: '"It does not do to dwell on dreams and forget to live."',
-    ravenclawOption:
-      '"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."',
-    hufflepuffOption:
-      '"Pity the living. And above all those who live without love."',
+    answers: {
+      slytherin:
+        '"It matters not what someone is born, but what they grow to be."',
+      gryffindor: '"It does not do to dwell on dreams and forget to live."',
+      ravenclaw:
+        '"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."',
+      hufflepuff:
+        '"Pity the living. And above all those who live without love."',
+    },
     weight: 3,
   },
   {
     question: "What type of Zodiac sign do you have?",
-    slytherinOption: "fire",
-    gryffindorOption: "earth",
-    ravenclawOption: "air",
-    hufflepuffOption: "water",
+    answers: {
+      slytherin: "Fire",
+      gryffindor: "Earth",
+      ravenclaw: "Air",
+      hufflepuff: "Water",
+    },
     weight: 1,
   },
   {
     question: "How would others describe you?",
-    slytherinOption: "ambitious",
-    gryffindorOption: "honorable",
-    ravenclawOption: "curious",
-    hufflepuffOption: "humble",
-    weight: 2,
+    answers: {
+      slytherin: "Ambitious",
+      gryffindor: "Honorable",
+      ravenclaw: "Curious",
+      hufflepuff: "Humble",
+    },
+    weight: 4,
   },
   {
     question: "What would you rather be?",
-    slytherinOption: "praised",
-    gryffindorOption: "respected",
-    ravenclawOption: "admired",
-    hufflepuffOption: "trusted",
-    weight: 3,
+    answers: {
+      slytherin: "Praised",
+      gryffindor: "Respected",
+      ravenclaw: "Admired",
+      hufflepuff: "Trusted",
+    },
+    weight: 4,
   },
   {
     question:
       "You encounter a troll on a bridge you want to cross; how do you deal with it?",
-    slytherinOption: "kill it",
-    gryffindorOption: "fight it fairly",
-    ravenclawOption: "trick it",
-    hufflepuffOption: "negotiate with it to let you pass",
-    weight: 2,
+    answers: {
+      slytherin: "kill it",
+      gryffindor: "fight it fairly",
+      ravenclaw: "trick it",
+      hufflepuff: "negotiate with it to let you pass",
+    },
+    weight: 3,
   },
   {
     question: "Which leisure activity is most appealing to you?",
-    slytherinOption: "improving myself",
-    gryffindorOption: "trying something new",
-    ravenclawOption: "reading",
-    hufflepuffOption: "volunteering",
+    answers: {
+      slytherin: "improving myself",
+      gryffindor: "trying something new",
+      ravenclaw: "reading",
+      hufflepuff: "volunteering",
+    },
     weight: 2,
   },
   {
-    question: "Which animal would you rather have as a pet?",
-    slytherinOption: "lizard",
-    gryffindorOption: "dog",
-    ravenclawOption: "cat",
-    hufflepuffOption: "bunny",
+    question: "Which of these animals would you rather have as a pet?",
+    answers: {
+      slytherin: "lizard",
+      gryffindor: "dog",
+      ravenclaw: "cat",
+      hufflepuff: "bunny",
+    },
     weight: 1,
   },
   {
     question:
       "If you could make a potion that would guarantee you one thing, what would it be?",
-    slytherinOption: "fame",
-    gryffindorOption: "respect",
-    ravenclawOption: "wisdom",
-    hufflepuffOption: "love",
+    answers: {
+      slytherin: "Fame",
+      gryffindor: "Respect",
+      ravenclaw: "Wisdom",
+      hufflepuff: "Love",
+    },
     weight: 1,
-  }, */
+  },
   {
     question:
       "You find a bag with 10,000 galleons in it; what do you do with it?",
-    slytherinOption: "Keep it & tell no one",
-    gryffindorOption: "Go to the police with it",
-    ravenclawOption: "Keep it & make a strategic investment",
-    hufflepuffOption: "Try to find the owner",
+    answers: {
+      slytherin: "Keep it & tell no one",
+      gryffindor: "Go to the police with it",
+      ravenclaw: "Keep it & make a strategic investment",
+      hufflepuff: "Try to find the owner",
+    },
     weight: 3,
   },
   {
+    question: "You would be most offended if someone called you...",
+    answers: {
+      slytherin: "Lazy",
+      gryffindor: "Cowardly",
+      ravenclaw: "Ignorant",
+      hufflepuff: "Inconsiderate",
+    },
+    weight: 5,
+  },
+  {
+    question: "What is the most likely reason you'd receive a Howler?",
+    answers: {
+      slytherin: "Cheating on an exam",
+      gryffindor: "Sneaking into the Forbidden Forest",
+      ravenclaw: "Staying in the library past closing time",
+      hufflepuff: "I would never, ever receive one",
+    },
+    weight: 5,
+  },
+  {
+    question: "Which of these career paths would you be most likely to pursue?",
+    answers: {
+      slytherin: "Minister of Magic",
+      gryffindor: "Auror",
+      ravenclaw: "Professor",
+      hufflepuff: "Dragon Keeper",
+    },
+    weight: 4,
+  },
+  {
+    question: "You notice a classmate cheating on an exam; what do you do?",
+    answers: {
+      slytherin: "Cheat harder",
+      gryffindor: "Tell the professor",
+      ravenclaw: "Rely on your wit & studying efforts",
+      hufflepuff: "Nothing",
+    },
+    weight: 3,
+  },
+  {
+    question: "Would you ever use a forbidden spell under any circumstances?",
+    answers: {
+      slytherin: "If it served me, & I could get away with it, yes",
+      gryffindor: "To save my life or the lives of others, yes",
+      ravenclaw: "I shouldn't ever need to use one",
+      hufflepuff: "No, that's illegal!",
+    },
+    weight: 6,
+  },
+  {
+    question: "After you have died, how do you want people to remember you?",
+    answers: {
+      slytherin: "Think with admiration of your achievements",
+      gryffindor: "Ask for more stories about your adventures",
+      ravenclaw:
+        "I don't care what people think of me after I'm dead, it's what they think of me while I'm alive that counts",
+      hufflepuff: "Miss you, but smile",
+    },
+    weight: 4,
+  },
+  {
+    question:
+      "If you could have one of these abilities, which would you choose?",
+    answers: {
+      slytherin: "Read others' minds",
+      gryffindor: "Invisibility",
+      ravenclaw: "Time travel",
+      hufflepuff: "Ability to talk with animals",
+    },
+    weight: 1,
+  },
+  {
+    question: "Which nightmare would frighten you most?",
+    answers: {
+      slytherin:
+        "Being forced to speak in such a silly voice & everyone laughs at you.",
+      gryffindor:
+        "Standing on top of something very high and realizing suddenly that there is nothing to stop you from falling",
+      ravenclaw:
+        "An eye at the keyhole of the dark, windowless room in which you are locked",
+      hufflepuff:
+        "Waking up to find that neither your friends nor your family have any idea who you are",
+    },
+    weight: 3,
+  },
+  {
+    question:
+      "Late at night, walking alone down the street, you hear a peculiar cry that you believe to have a magical source. What would you do?",
+    answers: {
+      slytherin: "Get the hell outta dodge",
+      gryffindor:
+        "Proceed with caution, keeping one hand on your concealed wand and an eye out for any disturbance",
+      ravenclaw:
+        "Withdraw into the shadows, mentally reviewing the most appropriate defensive and offensive spells, should trouble occur",
+      hufflepuff: "Contact the right authorities to see if someone needs help",
+    },
+    weight: 5,
+  },
+  {
     question: "Which house do you hope to be in?",
-    slytherinOption: "slytherin",
-    gryffindorOption: "gryffindor",
-    ravenclawOption: "ravenclaw",
-    hufflepuffOption: "hufflepuff",
+    answers: {
+      slytherin: "Slytherin",
+      gryffindor: "Gryffindor",
+      ravenclaw: "Ravenclaw",
+      hufflepuff: "Hufflepuff",
+    },
     weight: 8,
   },
 ];
