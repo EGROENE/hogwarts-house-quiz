@@ -154,7 +154,8 @@ const proceed = (): void => {
         <img src="${selectedHouse().houseCrest}">
         </div>
         <p>${selectedHouse().houseName}</p>
-      </div>
+        </div>
+        <button id="retake-quiz-btn" onclick="window.location.reload()">Retake Quiz!</button>
       `;
 
     // Animate results header:
@@ -168,6 +169,14 @@ const proceed = (): void => {
     const resultingHouse = document.getElementById("results-info-container");
     resultingHouse!.classList.add("animate__animated");
     resultingHouse!.classList.add("animate__jackInTheBox");
+
+    // Animate "retake quiz" btn:
+    const retakeQuizBtn = document.getElementById("retake-quiz-btn");
+    setTimeout(() => {
+      retakeQuizBtn!.style.display = "block";
+      retakeQuizBtn!.classList.add("animate__animated");
+      retakeQuizBtn!.classList.add("animate__jackInTheBox");
+    }, 3000);
   }
 };
 
