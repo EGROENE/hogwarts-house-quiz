@@ -177,6 +177,10 @@ const proceed = (): void => {
       retakeQuizBtn!.classList.add("animate__animated");
       retakeQuizBtn!.classList.add("animate__jackInTheBox");
     }, 3000);
+    setTimeout(() => {
+      retakeQuizBtn!.classList.remove("animate__animated");
+      retakeQuizBtn!.classList.remove("animate__jackInTheBox");
+    }, 7000);
   }
 };
 
