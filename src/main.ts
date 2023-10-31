@@ -143,6 +143,18 @@ const proceed = (): void => {
     document.body.style.backgroundImage =
       "url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimgix.bustle.com%2Frehost%2F2016%2F9%2F13%2F6fe7362a-78fa-4484-933e-5cd0a3215d2f.jpg%3Fw%3D800%26fit%3Dcrop%26crop%3Dfaces%26auto%3Dformat%252Ccompress%26q%3D50%26dpr%3D2&f=1&nofb=1&ipt=f77da5db48dd5f226a9485ba4901b3463f2413a421a4008c3d856a5caf9fd653&ipo=images)";
 
+    if (window.innerWidth <= 1024 && window.innerWidth > 900) {
+      document.body.style.backgroundPositionX = "-33rem";
+    }
+
+    if (window.innerWidth <= 900 && window.innerWidth > 615) {
+      document.body.style.backgroundPositionX = "-54rem";
+    }
+
+    if (window.innerWidth <= 615) {
+      document.body.style.backgroundPositionX = "-27rem";
+    }
+
     // Unhide results area:
     resultsArea!.style.display = "flex";
 

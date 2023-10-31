@@ -98,6 +98,7 @@ button:hover {
 
 .question header {
   font-size: var(--size-36);
+  margin: 1.5rem 0;
 }
 
 .question header:first-child {
@@ -130,6 +131,7 @@ button:hover {
 
 #results-area {
   width: 75%;
+  height: 54rem;
   display: none;
   flex-direction: column;
   background: rgba(0, 0, 0, 0.7);
@@ -148,21 +150,317 @@ button:hover {
   margin-top: var(--size-16);
 }
 
-#house-logo-container {
-  width: 100%;
-  max-width: 100%;
-}
-
-#house-logo-container img {
-  width: 13rem;
+#results-info-container img {
+  width: 19rem;
 }
 
 #results-area p {
   text-transform: uppercase;
   color: var(--hp-gold);
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 #retake-quiz-btn {
   display: none;
+}
+
+/* RESPONSIVE STYLING */
+@media screen and (max-width: 1920px) and (min-height: 1080px) {
+  #greeting h1 {
+      font-size: var(--size-36);
+      font-size: 6rem;
+  }
+
+  #greeting h2 {
+      font-size: var(--size-32);
+      font-size: 4rem;
+  }
+
+  button {
+      font-size: 3rem;
+      padding: 2rem 4rem;        
+  }
+
+  .question header {
+      font-size: 5rem;
+  }
+
+  #options-area button {
+    font-size: 2rem;
+    margin: 1.15rem 0;
+  }
+
+  #results-area header {
+    font-size: 4rem;
+  }
+
+  #house-logo-container img {
+    width: 20rem;
+  }
+
+  #results-area p {
+    font-size: 4rem;
+  }
+
+  #retake-quiz-btn {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #results-area {
+    height: 43rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  button {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  #results-area {
+    height: 34rem;
+  }
+
+  #results-info-container img {
+    width: 15rem;
+  }
+
+  #results-info-container p {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #results-area {
+    height: 36rem;
+  }
+
+  #results-info-container img {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #length-selector-btns-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #short {
+    margin-bottom: 2rem;
+  }
+
+  #results-area {
+    height: 53rem;
+  }
+
+  #results-info-container img {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 884px) {
+  button {
+    font-size: 2rem;
+    padding: 2rem 4rem;
+  }
+
+  #greeting h1 {
+    font-size: 4rem;
+  }
+
+  #greeting h2 {
+    font-size: 3rem;
+  }
+
+  #results-area {
+    height: 52rem;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  #results-area {
+    height: 57rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+  }
+
+  .question header {
+    font-size: 4rem;
+  }
+
+  #options-area button {
+    margin: var(--size-8) 0 var(--size-8) 0;
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  #results-area {
+    height: 44rem;
+  }
+
+  #results-area header {
+    font-size: 3rem;
+  }
+
+  #results-info-container img {
+    width: 17rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  #greeting h1 {
+    font-size: 3rem;
+  }
+
+  #greeting h2 {
+    font-size: 2rem;
+  }
+
+  .question header {
+    font-size: 3rem;
+  }
+
+  #options-area button {
+    font-size: 1.5rem;
+  }
+
+  #results-area {
+    height: 38rem;
+  }
+
+  #results-info-container img {
+    width: 19rem;
+  }
+
+  #results-area header {
+    font-size: 2rem;
+  }
+
+  #results-info-container {
+    margin-top: 3rem;
+  }
+
+  #results-info-container img {
+    width: 15rem;
+  }
+
+  #results-area p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .question header {
+    font-size: 3rem;
+  }
+
+  #options-area button {
+    font-size: 1.5rem;
+  }
+
+  #results-area {
+    height: 46rem;
+  }
+
+  #results-info-container img {
+    width: 17rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .question header {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  #options-area button {
+    font-size: 0.95rem;
+  }
+
+  #results-area {
+    height: 26rem;
+  }
+
+  #results-info-container {
+    margin-top: 1rem;
+  }
+
+  #results-info-container img {
+    width: 9rem;
+  }
+
+  #results-area p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #greeting {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  #greeting h1 {
+    font-size: 2.5rem;
+  }
+
+  #question-area {
+    padding: 1rem;
+  }
+
+  #results-area {
+    height: 29rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #options-area button {
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #greeting h1 {
+    font-size: 2rem;
+  }
+
+  #greeting h2 {
+    font-size: 1.5rem;
+  }
+
+  #question-area {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  #results-area {
+    height: 27rem;
+  }
 }
