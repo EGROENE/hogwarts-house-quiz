@@ -156,6 +156,18 @@ const proceed = (): void => {
         <p>${selectedHouse().houseName}</p>
       </div>
       `;
+
+    // Animate results header:
+    const resultHeader = document.querySelector<HTMLElement>(
+      "#results-area header"
+    );
+    resultHeader!.classList.add("animate__animated");
+    resultHeader!.classList.add("animate__fadeInLeft");
+
+    // Animate house crest:
+    const resultingHouse = document.getElementById("results-info-container");
+    resultingHouse!.classList.add("animate__animated");
+    resultingHouse!.classList.add("animate__jackInTheBox");
   }
 };
 
