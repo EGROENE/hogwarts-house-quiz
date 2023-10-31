@@ -1,0 +1,466 @@
+:root {
+  --size-4: 0.25rem;
+  --size-8: 0.5rem;
+  --size-12: 0.75rem;
+  --size-16: 1rem;
+  --size-20: 1.25rem;
+  --size-24: 1.5rem;
+  --size-28: 1.75rem;
+  --size-32: 2rem;
+  --size-36: 2.25rem;
+  --size-40: 2.5rem;
+  --size-42: 2.75rem;
+  --size-48: 3rem;
+  --size-56: 3.5rem;
+  --size-64: 4rem;
+  --hp-gold: #D3A625;
+  --gryffindor-red: #AE0001;
+  --slytherin-green: #2A623D;
+  --slytherin-silver: #AAAAAA;
+  --ravenclaw-blue: #222F5B;
+  --ravenclaw-gold: #946B2D;
+  --hufflepuff-yellow: #FFD800;
+  --hufflepuff-brown: #DE9245;
+}
+
+/* Declare Potterfont font */
+@font-face { font-family: Potterfont; src: url('../assets/font/HarryP-MVZ6w.ttf'); }
+
+body {
+  font-family: Potterfont, serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+#greeting {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 10% auto;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--hp-gold);
+  font-size: var(--size-24);
+  width: 75%;
+  letter-spacing: var(--size-4);
+  border-radius: 24px;
+  padding: var(--size-42);
+}
+
+#greeting h1 {
+  font-size: var(--size-36);
+}
+
+#greeting h2 {
+  font-size: var(--size-32);
+}
+
+button {
+  font-family: 'Bellota', cursive;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: var(--size-12) var(--size-24);
+  font-size: var(--size-24);
+  border-radius: 8px;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+  transition: 200ms;
+}
+
+#question-area {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--hp-gold);
+  font-size: var(--size-24);
+  width: 75%;
+  letter-spacing: var(--size-4);
+  border-radius: 24px;
+  padding: var(--size-40);
+  margin: 4% auto;
+}
+
+.question header {
+  font-size: var(--size-36);
+  margin: 1.5rem 0;
+}
+
+.question header:first-child {
+  color: silver;
+}
+
+#options-area {
+  display: flex;
+  flex-direction: column;
+}
+
+#options-area button {
+  background: transparent;
+  border: 2px solid white;
+  margin: var(--size-8) 0 var(--size-8) 0;
+  color: white;
+  padding: var(--size-12);
+  font-size: var(--size-20);
+  letter-spacing: var(--size-4);
+  border-radius: 16px;
+}
+
+#options-area button:hover {
+  background: black;
+}
+
+.animate__jackInTheBox {
+  animation-delay: 3s;
+}
+
+#results-area {
+  width: 75%;
+  height: 54rem;
+  display: none;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding: var(--size-16);
+  border-radius: var(--size-16);
+}
+
+#results-area header {
+  font-size: var(--size-36);
+}
+
+#results-info-container {
+  margin-top: var(--size-16);
+}
+
+#results-info-container img {
+  width: 19rem;
+}
+
+#results-area p {
+  text-transform: uppercase;
+  color: var(--hp-gold);
+  font-size: 2rem;
+}
+
+#retake-quiz-btn {
+  display: none;
+}
+
+/* RESPONSIVE STYLING */
+@media screen and (max-width: 1920px) and (min-height: 1080px) {
+  #greeting h1 {
+      font-size: var(--size-36);
+      font-size: 6rem;
+  }
+
+  #greeting h2 {
+      font-size: var(--size-32);
+      font-size: 4rem;
+  }
+
+  button {
+      font-size: 3rem;
+      padding: 2rem 4rem;        
+  }
+
+  .question header {
+      font-size: 5rem;
+  }
+
+  #options-area button {
+    font-size: 2rem;
+    margin: 1.15rem 0;
+  }
+
+  #results-area header {
+    font-size: 4rem;
+  }
+
+  #house-logo-container img {
+    width: 20rem;
+  }
+
+  #results-area p {
+    font-size: 4rem;
+  }
+
+  #retake-quiz-btn {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  #results-area {
+    height: 43rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  button {
+    font-size: 1.25rem;
+    padding: 0.5rem;
+  }
+
+  #results-area {
+    height: 34rem;
+  }
+
+  #results-info-container img {
+    width: 15rem;
+  }
+
+  #results-info-container p {
+    margin: 2rem;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #results-area {
+    height: 36rem;
+  }
+
+  #results-info-container img {
+    width: 16rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #length-selector-btns-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #short {
+    margin-bottom: 2rem;
+  }
+
+  #results-area {
+    height: 53rem;
+  }
+
+  #results-info-container img {
+    width: 22rem;
+  }
+}
+
+@media screen and (max-width: 884px) {
+  button {
+    font-size: 2rem;
+    padding: 2rem 4rem;
+  }
+
+  #greeting h1 {
+    font-size: 4rem;
+  }
+
+  #greeting h2 {
+    font-size: 3rem;
+  }
+
+  #results-area {
+    height: 52rem;
+  }
+}
+
+@media screen and (max-width: 853px) {
+  #results-area {
+    height: 57rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+  }
+
+  .question header {
+    font-size: 4rem;
+  }
+
+  #options-area button {
+    margin: var(--size-8) 0 var(--size-8) 0;
+    margin: 1rem 0;
+    font-size: 2rem;
+  }
+
+  #results-area {
+    height: 44rem;
+  }
+
+  #results-area header {
+    font-size: 3rem;
+  }
+
+  #results-info-container img {
+    width: 17rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 615px) {
+  #greeting h1 {
+    font-size: 3rem;
+  }
+
+  #greeting h2 {
+    font-size: 2rem;
+  }
+
+  .question header {
+    font-size: 3rem;
+  }
+
+  #options-area button {
+    font-size: 1.5rem;
+  }
+
+  #results-area {
+    height: 38rem;
+  }
+
+  #results-info-container img {
+    width: 19rem;
+  }
+
+  #results-area header {
+    font-size: 2rem;
+  }
+
+  #results-info-container {
+    margin-top: 3rem;
+  }
+
+  #results-info-container img {
+    width: 15rem;
+  }
+
+  #results-area p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .question header {
+    font-size: 3rem;
+  }
+
+  #options-area button {
+    font-size: 1.5rem;
+  }
+
+  #results-area {
+    height: 46rem;
+  }
+
+  #results-info-container img {
+    width: 17rem;
+  }
+
+  #results-area p {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  button {
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+  }
+
+  .question header {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  #options-area button {
+    font-size: 0.95rem;
+  }
+
+  #results-area {
+    height: 26rem;
+  }
+
+  #results-info-container {
+    margin-top: 1rem;
+  }
+
+  #results-info-container img {
+    width: 9rem;
+  }
+
+  #results-area p {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  #greeting {
+    padding: 2rem;
+    margin: 0;
+  }
+
+  #greeting h1 {
+    font-size: 2.5rem;
+  }
+
+  #question-area {
+    padding: 1rem;
+  }
+
+  #results-area {
+    height: 29rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #options-area button {
+    margin: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #greeting h1 {
+    font-size: 2rem;
+  }
+
+  #greeting h2 {
+    font-size: 1.5rem;
+  }
+
+  #question-area {
+    padding: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 360px) and (max-height: 740px) {
+  #results-area {
+    height: 27rem;
+  }
+}

@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>What's My Hogwarts House?</title>
 
     <!--INSERT FAVICON-->
-    <link rel="shortcut icon" type="image/jpg" href="./assets/hogwarts-crest.png">
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./assets/hogwarts-crest.png"
+    />
 
     <!--LINKS TO STYLESHEETS-->
-    <link rel="stylesheet" href="./css/styling.css">
-    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./src/style.css" />
 
     <!--IMPORT ANIMATIONS PACKAGE-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
     <!--LINK TO GOOGLE FONT(S)-->
-    <link href="https://fonts.googleapis.com/css2?family=Bellota&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="greeting">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellota&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div id="greeting">
         <h1>Ever wonder which Hogwarts House you belong in?</h1>
         <h2>Take the quiz to find out!</h2>
-        <button id="start-btn">Start Quiz!</button>
+        <div id="length-selector-btns-container">
+          <button class="length-selector-btn" id="short">
+            Short Version <br />(15 questions)
+          </button>
+          <button class="length-selector-btn" id="long">
+            Long Version<br />(30 questions)
+          </button>
+        </div>
+      </div>
+      <div id="question-area"></div>
+      <div id="results-area"></div>
     </div>
-    <div id="question-area"></div>
-    <div id="results-area"></div>
-    <script src="./js/main.js"></script>
-</body>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
 </html>
