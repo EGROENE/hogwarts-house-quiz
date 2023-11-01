@@ -1,21 +1,21 @@
 ﻿# hogwarts-house-quiz
-
-## As of October 26, 2023, I am working on not only improving my code, but also converting the JavaScript to TypeScript. The deployed version will continue to run based on the old code, as it is functional, until I complete the revised version. Stay tuned...
  
-As the name suggests, this web app, which I built using HTML, CSS, & vanilla JavaScript, gives users the chance to see which Hogwarts House they would likely be sorted into. Here's how it works:
+As the name suggests, this web app, which I built using HTML, CSS, & vanilla TypeScript, gives users the chance to see which Hogwarts House they would likely be sorted into. Below, I describe how it works. For more details, please see my code and the comments within.
 
 * A random image displays as the page background. I stored several image URLs from Unsplash in an array & looped through it, selecting a random one when the page loads & when a new question displays. I set a particular background on the results page.
 
-* Upon loading of the page, the user is greeted & prompted to click a button to start the quiz. 
+* Upon loading of the page, the user is greeted & prompted to click a button to start the quiz, whether they want to play the shorter (15 questions) or the longer version (30 questions). 
 
-* Upon starting the quiz, the greeting is hidden & the first question displays. For each question, I display the question tally out of total questions, which I store as objects inside of an array, so it displays as: index of the question / length of questions array. I did it this way so it's scalable; if I add or subtract questions, I don't have to change anything about the tally to make the correct numbers appear.
+* Upon starting the quiz, the greeting is hidden & the first question displays. For each question, I display the question tally out of total questions, which I store as objects inside of an array, so it displays as: index of the question / length of questions array, which is also randomized, except for the last question of the quiz, which asks the user for their house preference. When the user plays the shorter version, a random 14 questions not about their house preference are selected and added to the questions array. Whether the short or the long version is played, the question about their preference is appended to the questions array.
 
-* Then, the question itself, which is a property of the given question's object inside the array containing all the questions, displays under the tally. 
+* The question itself, which is a property of the given question's object inside the array containing all the questions, displays under the tally. Answer options are randomly ordered.
 
-* Then, potential answers, each of which correspond to one of the four houses, display in random order. Inside each question's object, I also added a 'weight' property, which is a number indicating the importance of the question in determining the user's House. When the user selects an option, this 'weight' property is added to the point total for the corresponding House. These point totals are stored in an array. 
+* Inside each question's object, I also added a 'weight' property, which is a number indicating the importance of the question in determining the user's house. When the user selects an option, this 'weight' property is added to the point total for the corresponding house, which are stored in an array. 
 
-* Upon moving to the next question (which happens immediately when the user selects a question option, the previous question is removed from the DOM & the next one displays.
+* Upon moving to the next question (which happens immediately when the user selects a question option, the info for that question is cleared from the DOM, and, if there is a sequential question, the info for that question populates the DOM; if there is no question to follow, the questions area is removed from the DOM & the results area displays.
 
-* At the end of the quiz, the final question is hidden & the House with the highest point total (max value in array) is selected & it's corresponding crest & heading appears. For this, I added a couple of cool animations.
+* At the end of the quiz, the house with the highest point total is selected & its corresponding crest & heading appears. For this, I added a couple of cool animations.
 
 If you are curious to try it out for yourself, go here: https://whats-my-hogwarts-house.netlify.app/
+
+I am happy to hear any feedback, whether it's on the experience of using this app, or on my code. Thanks for reading!
