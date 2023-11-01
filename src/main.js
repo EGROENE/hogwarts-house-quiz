@@ -1,5 +1,5 @@
 var _a;
-import { bgImages, housesInfo, allQuestions } from "./constants";
+import { bgImages, housesInfo, allQuestions } from "./constants.js";
 // Functionality to change bg image:
 var setRandBG = function () {
   var randNum = Math.floor(Math.random() * bgImages.length);
