@@ -34,7 +34,6 @@ body {
   align-items: center;
   height: 100vh;
   background-size: cover;
-  background-attachment: fixed;
 }
 
 #app {
