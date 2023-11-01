@@ -274,11 +274,11 @@ export const allQuestions = [
     weight: 4,
   },
   {
-    question: "You notice a classmate cheating on an exam; what do you do?",
+    question: "You notice a friend cheating on an exam; what do you do?",
     answers: {
-      slytherin: "Cheat harder",
+      slytherin: "Offer to let them cheat off of your test next time",
       gryffindor: "Tell the professor",
-      ravenclaw: "Rely on your wit & studying efforts",
+      ravenclaw: "Offer to help them study for the next one",
       hufflepuff: "Nothing",
     },
     weight: 3,
@@ -319,7 +319,7 @@ export const allQuestions = [
     question: "Which nightmare would frighten you most?",
     answers: {
       slytherin:
-        "Being forced to speak in such a silly voice & everyone laughs at you.",
+        "Being forced to speak in a silly voice & everyone laughs at you.",
       gryffindor:
         "Standing on top of something very high and realizing suddenly that there is nothing to stop you from falling",
       ravenclaw:
@@ -330,15 +330,12 @@ export const allQuestions = [
     weight: 3,
   },
   {
-    question:
-      "Late at night, walking alone down the street, you hear a peculiar cry that you believe to have a magical source. What would you do?",
+    question: "Choose one of these things to do for the rest of your life",
     answers: {
-      slytherin: "Get the hell outta dodge",
-      gryffindor:
-        "Proceed with caution, keeping one hand on your concealed wand and an eye out for any disturbance",
-      ravenclaw:
-        "Withdraw into the shadows, mentally reviewing the most appropriate defensive and offensive spells, should trouble occur",
-      hufflepuff: "Contact the right authorities to see if someone needs help",
+      slytherin: "Start your own company",
+      gryffindor: "Explore the world",
+      ravenclaw: "Stay in school",
+      hufflepuff: "Raise a family",
     },
     weight: 5,
   },
