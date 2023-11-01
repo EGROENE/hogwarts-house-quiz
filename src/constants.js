@@ -316,16 +316,14 @@ export const allQuestions = [
   {
     question: "Which nightmare would frighten you most?",
     answers: {
-      slytherin:
-        "Being forced to speak in a silly voice & everyone laughs at you.",
+      slytherin: "Being publicly embarrassed",
       gryffindor:
-        "Standing on top of something very high and realizing suddenly that there is nothing to stop you from falling",
+        "Being trapped on a high-up place with nothing to stop you from falling",
       ravenclaw:
         "An eye at the keyhole of the dark, windowless room in which you are locked",
-      hufflepuff:
-        "Waking up to find that neither your friends nor your family have any idea who you are",
+      hufflepuff: "Your loved ones forget who you are",
     },
-    weight: 3,
+    weight: 2,
   },
   {
     question: "Choose one of these things to do for the rest of your life",
