@@ -1,6 +1,3 @@
-"use strict";
-/* Object.defineProperty(exports, "__esModule", { value: true });
-exports.allQuestions = exports.housesInfo = exports.bgImages = void 0; */
 export const bgImages = [
   "https://images.unsplash.com/photo-1598153346810-860daa814c4b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8aGFycnklMjBwb3R0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1547756536-cde3673fa2e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aGFycnklMjBwb3R0ZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",

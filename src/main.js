@@ -1,4 +1,3 @@
-"use strict";
 var _a;
 import { bgImages, housesInfo, allQuestions } from "./constants";
 // Functionality to change bg image:
