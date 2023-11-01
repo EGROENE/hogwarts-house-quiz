@@ -93,7 +93,7 @@ button:hover {
   letter-spacing: var(--size-4);
   border-radius: 24px;
   padding: var(--size-40);
-  margin: 4% auto;
+  margin: 0.5rem auto;
 }
 
 .question header {
