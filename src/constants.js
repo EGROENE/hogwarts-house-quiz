@@ -17,22 +17,10 @@ export const bgImages = [
   "https://images.unsplash.com/photo-1498676077434-7540603d2dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODh8fGhhcnJ5JTIwcG90dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
 ];
 export const housesInfo = [
-  {
-    houseName: "Slytherin",
-    houseCrest: "./assets/crest-slytherin.png",
-  },
-  {
-    houseName: "Gryffindor",
-    houseCrest: "./assets/crest-gryffindor.png",
-  },
-  {
-    houseName: "Ravenclaw",
-    houseCrest: "./assets/crest-ravenclaw.png",
-  },
-  {
-    houseName: "Hufflepuff",
-    houseCrest: "./assets/crest-hufflepuff.png",
-  },
+  { houseName: "Slytherin", houseCrest: "./assets/crest-slytherin.png" },
+  { houseName: "Gryffindor", houseCrest: "./assets/crest-gryffindor.png" },
+  { houseName: "Ravenclaw", houseCrest: "./assets/crest-ravenclaw.png" },
+  { houseName: "Hufflepuff", houseCrest: "./assets/crest-hufflepuff.png" },
 ];
 export const allQuestions = [
   {
@@ -148,13 +136,11 @@ export const allQuestions = [
   {
     question: "Which is your favorite Dumbledore quote?",
     answers: {
-      slytherin:
-        '"It matters not what someone is born, but what they grow to be."',
+      slytherin: '"It matters not what someone is born, but what they grow to be."',
       gryffindor: '"It does not do to dwell on dreams and forget to live."',
       ravenclaw:
         '"Words are, in my not-so-humble opinion, our most inexhaustible source of magic."',
-      hufflepuff:
-        '"Pity the living. And above all those who live without love."',
+      hufflepuff: '"Pity the living. And above all those who live without love."',
     },
     weight: 3,
   },
@@ -231,8 +217,7 @@ export const allQuestions = [
     weight: 1,
   },
   {
-    question:
-      "You find a bag with 10,000 galleons in it; what do you do with it?",
+    question: "You find a bag with 10,000 galleons in it; what do you do with it?",
     answers: {
       slytherin: "Keep it & tell no one",
       gryffindor: "Go to the police with it",
@@ -303,8 +288,7 @@ export const allQuestions = [
     weight: 4,
   },
   {
-    question:
-      "If you could have one of these abilities, which would you choose?",
+    question: "If you could have one of these abilities, which would you choose?",
     answers: {
       slytherin: "Read others' minds",
       gryffindor: "Invisibility",
