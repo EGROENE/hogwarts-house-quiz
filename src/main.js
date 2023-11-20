@@ -126,7 +126,7 @@ for (
     })[0],
     questionsNotOnHousePreference = shuffleArray(
       t.filter(function (e) {
-        return "Which house do you hope to be in?" !== e.question;
+        return questionOnHousePreference !== e;
       })
     ),
     getQuestionArray = function () {

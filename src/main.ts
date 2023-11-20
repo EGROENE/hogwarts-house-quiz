@@ -129,9 +129,7 @@ const proceed = (): void => {
       houseName: string;
       houseCrest: string;
     } => {
-      const houseTotals = Object.values(housesAndTheirTotals).map(
-        (score) => score
-      );
+      const houseTotals = Object.values(housesAndTheirTotals).map((score) => score);
       const highestScore = Math.max(...houseTotals);
       return housesInfo[houseTotals.indexOf(highestScore)];
     };
@@ -169,9 +167,7 @@ const proceed = (): void => {
       `;
 
     // Animate results header:
-    const resultHeader = document.querySelector<HTMLElement>(
-      "#results-area header"
-    );
+    const resultHeader = document.querySelector<HTMLElement>("#results-area header");
     resultHeader!.classList.add("animate__animated");
     resultHeader!.classList.add("animate__fadeInLeft");
 
@@ -223,9 +219,7 @@ const questionOnHousePreference: {
 
 // Define array of questions not including the question on user's preference:
 let questionsNotOnHousePreference = shuffleArray(
-  allQuestions.filter(
-    (question) => question.question !== "Which house do you hope to be in?"
-  )
+  allQuestions.filter((question) => question !== questionOnHousePreference)
 );
 
 // Populate questionArray:
@@ -241,9 +235,7 @@ const getQuestionArray = (): void => {
 //////////////////////////////////////////////////////////////////
 
 // Add handleLengthSelection(), getQuestionArray(), & proceed() in EL onClick of length-selector btns:
-const lengthSelectorBtns = document.querySelectorAll<HTMLElement>(
-  ".length-selector-btn"
-);
+const lengthSelectorBtns = document.querySelectorAll<HTMLElement>(".length-selector-btn");
 for (const btn of lengthSelectorBtns) {
   btn.addEventListener("click", () => {
     handleLengthSelection(btn.id);
