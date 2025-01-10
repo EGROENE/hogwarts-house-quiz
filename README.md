@@ -1,4 +1,6 @@
 ﻿# hogwarts-house-quiz
+
+NOTE: This was one of the first projects I built in JavaScript. Though I converted it to TypeScript from vanilla JavaScript in order to familiarize myself with TS, I have not made significant improvements to the code, so please don't make harsh judgments, though I do welcome feedback.
  
 As the name suggests, this web app, which I built using HTML, CSS, & vanilla TypeScript, gives users the chance to see which Hogwarts House they would likely be sorted into. Below, I describe how it works. For more details, please see my code and the comments within.
 
