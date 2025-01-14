@@ -18,6 +18,6 @@ As the name suggests, this web app, which I built using HTML, CSS, & vanilla Typ
 
 * At the end of the quiz, the house with the highest point total is selected & its corresponding crest & heading appears. For this, I added a couple of cool animations.
 
-If you are curious to try it out for yourself, go here: https://whats-my-hogwarts-house.netlify.app/
+If you are curious to try it out for yourself, go here: https://hogwarts-house-quiz.pages.dev/
 
 I am happy to hear any feedback, whether it's on the experience of using this app, or on my code. Thanks for reading!
